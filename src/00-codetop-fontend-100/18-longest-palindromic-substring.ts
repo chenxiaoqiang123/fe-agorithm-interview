@@ -69,9 +69,9 @@ function longestPalindrome(s: string): string {
 function longestPalindrome(s: string): string {
     let res = ''
     for (let i = 0; i < s.length; i++) {
-        const str1 = palindrome(s, i, i)
-        const str2 = palindrome(s, i, i + 1)
-        res = res.length > str1.length ? res : str1
+        const str1 = palindrome(s, i, i) // 奇数
+        const str2 = palindrome(s, i, i + 1) // 偶数
+        res = res.length > str1.length ? res : str1 
         res = res.length > str2.length ? res : str2
     }
     return res
